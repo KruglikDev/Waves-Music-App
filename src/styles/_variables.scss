@@ -1,0 +1,81 @@
+:root {
+  --mainTextColor: rgb(99, 99, 99);
+  --secondaryTextColor: rgb(99, 99, 99);
+  --focus: brightness(1.1);
+
+  --gap: 2.5rem;
+  --transition: all 0.1s ease-in-out;
+  --transitionLong: all 0.5s ease-out;
+  --bgGradient: linear-gradient(
+    318.32deg,
+    #c3d1e4 0%,
+    #dde7f3 55%,
+    #d4e0ed 100%
+  );
+
+  --btnSize: 62px;
+  --btnBorderRadius: 180px;
+  --borderGap: 2px;
+  --btnOuterShadow: 4px 2px 16px rgba(136, 165, 191, 0.48),
+    -4px -2px 16px #ffffff;
+  --btnCheckedInsetShadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48),
+    inset -3px -3px 7px #ffffff;
+
+  --btnContentBorderRadius: calc(var(--btnBorderRadius) - var(--borderGap));
+  --iconColor: rgba(201, 215, 230, 0.8);
+  --iconSize: calc((var(--btnSize) / 2));
+  --iconShadow: 2px 2px 2px rgba(214, 225, 239, 0.6), 0 0 0 #000,
+    2px 2px 2px rgba(214, 225, 239, 0);
+  --btnCheckedIconShadow: 1px 1px 1px rgba(214, 225, 239, 0.6), 0 0 0 #000,
+    1px 1px 1px rgba(214, 225, 239, 0);
+  --darkShadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001;
+  --lightShadow: 1px 1px 1px whitesmoke;
+  --main-image-shadow: -2px -2px 5px 2px rgb(255, 255, 255),
+    1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark-mode {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --secondaryTextColor: grey;
+    --main-image-shadow: inset 2px 2px 3px black,
+      inset -0.5px -0.5px 12px rgba(255, 255, 255, 0.24);
+
+    --lightShadow: 0;
+
+    --bgGradient: #181818;
+    --darkShadow: -3px -3px 3px 0 rgba(255, 255, 255, 0.04),
+      5px 5px 5px 0 rgba(0, 0, 0, 2);
+    --btnCheckedIconShadow: -1px -1px 1px 0 rgba(255, 255, 255, 0.04),
+      1px 1px 1px 0 rgba(0, 0, 0, 2);
+    --iconShadow: 1px 1px 1px rgba(214, 225, 239, 0.6), 0 0 0 #000,
+      1px 1px 1px rgba(214, 225, 239, 0);
+
+    --btnOuterShadow: 2px 2px 2px 0 rgba(255, 255, 255, 0.062),
+      2px 2px 5px 0 rgba(0, 0, 0, 2);
+
+    --btnCheckedInsetShadow: inset 2px 2px 7px rgba(41, 56, 70, 0.48),
+      inset -2px -2px 7px rgba(136, 165, 191, 0.48);
+
+    --focus: saturate(2);
+  }
+}
+
+//Maps
+$screen-sizes: (
+  "big": 1200px,
+  "tablet": 768px,
+  "mobile": 500px
+);
+
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);

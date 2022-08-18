@@ -1,0 +1,85 @@
+@use '../styles' as *;
+
+//Removing scrollbar
+* {
+  scrollbar-width: 0px;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+}
+
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  overflow: scroll;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 1s ease;
+  background: var(--bgGradient);
+
+  box-shadow: var(--darkShadow);
+  h2 {
+    color: var(--mainTextColor);
+    padding: 2rem;
+    font-weight: map-get($font-weights, bold);
+    font-size: 2rem;
+  }
+}
+
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.5s ease;
+
+  img {
+    width: 30%;
+    border-radius: 5%;
+    box-shadow: var(--darkShadow);
+  }
+
+  &:hover {
+    background-color: rgb(195, 216, 248);
+  }
+}
+
+.song-description {
+  padding-left: 1rem;
+}
+
+.selected {
+  background: #ffbccf;
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: all 1s;
+}
+
+@media screen and (max-width: map-get($screen-sizes, tablet)) {
+  .library {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: map-get($screen-sizes, mobile)) {
+  .library {
+    width: 100%;
+    background-image: var(--bgGradient);
+  }
+}

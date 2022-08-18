@@ -1,0 +1,38 @@
+@use '../styles' as *;
+
+nav {
+  min-height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .btn {
+    width: calc(var(--btnSize) - 10px);
+    height: calc(var(--btnSize) - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+}
+
+.buttons {
+  display: flex;
+}
+
+.fa-music {
+  padding-left: 0.3rem;
+}
+
+.dark-mode {
+  border: none;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: map-get($screen-sizes, tablet)) {
+  nav {
+    button {
+      z-index: 10;
+    }
+  }
+}

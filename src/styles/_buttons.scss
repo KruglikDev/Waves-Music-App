@@ -1,0 +1,68 @@
+.btn {
+  outline: none;
+  border: none;
+  background: none;
+  width: var(--btnSize);
+  height: var(--btnSize);
+  position: relative;
+  border-radius: var(--btnBorderRadius);
+  padding: var(--borderGap);
+  box-shadow: var(--darkShadow);
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    label {
+      box-shadow: var(--btnCheckedInsetShadow);
+      i {
+        text-shadow: var(--btnCheckedIconShadow);
+      }
+    }
+  }
+
+  .content-wrapper {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--btnContentBorderRadius);
+    transition: var(--transition);
+    display: grid;
+    place-items: center;
+
+    i {
+      user-select: none;
+      transition: var(--transition);
+      font-size: var(--iconSize);
+      position: relative;
+      pointer-events: none;
+      color: var(--iconColor);
+      text-shadow: var(--iconShadow);
+    }
+  }
+}
+
+.visually-hidden {
+  border-width: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.vertical-button {
+  width: 1rem;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+}
+
+input[type="radio"]:checked + label {
+  box-shadow: var(--btnCheckedInsetShadow);
+  i {
+    text-shadow: var(--btnCheckedIconShadow);
+  }
+}

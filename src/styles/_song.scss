@@ -1,0 +1,41 @@
+@use '../styles' as *;
+
+.song-container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .img-container {
+    background-size: cover;
+    max-width: 280px;
+    width: 100%;
+    height: 280px;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: var(--main-image-shadow);
+
+    &:hover {
+      filter:saturate(1.5);
+    }
+
+    @media screen and (max-width: map-get($screen-sizes, tablet)) {
+      width: 230px;
+      height: 230px;
+    }
+  }
+
+  h2 {
+    padding: 1rem;
+    color: var(--mainTextColor);
+  }
+
+  h3 {
+    color: var(--secondaryTextColor);
+    font-weight: map-get($font-weights, regular);
+    text-shadow: none;
+  }
+}
+
+

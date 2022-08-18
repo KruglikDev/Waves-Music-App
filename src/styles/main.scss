@@ -1,0 +1,58 @@
+@use '../styles' as *;
+@use "./song";
+@use "./player";
+@use "./library";
+@use "./nav";
+@use "./buttons";
+@use "./app";
+@import url("https://fonts.googleapis.com/css?family=Material+Icons+Round");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:focus {
+  filter: var(--focus);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: var(--bgGradient);
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h1,
+h3 {
+  font-weight: map-get($font-weights, bold);
+  color: #ffffff;
+  text-shadow: 1px 1px 3px var(--secondaryTextColor);
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h2,
+p {
+  text-shadow: var(--lightShadow);
+}
+
+h4 {
+  font-weight: map-get($font-weights, regular);
+  color: var(--secondaryTextColor);
+  text-shadow: var(--lightShadow);
+}
+
+p {
+  color: var(--secondaryTextColor);
+}
