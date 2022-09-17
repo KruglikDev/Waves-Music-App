@@ -1,0 +1,60 @@
+@use './animations' as *;
+
+//font-size: calc(16px + (32 - 16)*(100vw - 320px)/(2560 - 320));
+
+.preloader {
+  animation: largePopOut var(--dur1) linear;
+  border-radius: 50%;
+  box-shadow:
+          0.15em 0.15em 0.15em var(--shade4) inset,
+          -0.15em -0.15em 0.15em var(--shade1) inset,
+          1em 1em 2em var(--shade1),
+          -1em -1em 2em var(--shade4);
+  margin-bottom: 3em;
+  position: relative;
+  width: 12em;
+  height: 12em;
+}
+.preloader__square {
+  animation: smallPopOut1 var(--dur1) linear, popInOut var(--dur2) var(--dur1) linear infinite;
+  border-radius: 0.5em;
+  box-shadow:
+          0.15em 0.15em 0.15em var(--shade4) inset,
+          -0.15em -0.15em 0.15em var(--shade1) inset,
+          0.25em 0.25em 0.5em var(--shade1),
+          -0.25em -0.25em 0.5em var(--shade4);
+  position: absolute;
+  top: 2.5em;
+  left: 2.5em;
+  width: 3em;
+  height: 3em;
+}
+.preloader__square:nth-child(n + 2):nth-child(-n + 3) {
+  left: 6.5em;
+}
+.preloader__square:nth-child(n + 3) {
+  top: 6.5em;
+}
+.preloader__square:nth-child(2) {
+  animation: smallPopOut2 var(--dur1) linear, move2 var(--dur2) var(--dur1) linear infinite;
+}
+.preloader__square:nth-child(3) {
+  animation: smallPopOut3 var(--dur1) linear, move3 var(--dur2) var(--dur1) linear infinite;
+}
+.preloader__square:nth-child(4) {
+  animation: smallPopOut4 var(--dur1) linear, move4 var(--dur2) var(--dur1) linear infinite;
+}
+.status {
+  animation: fadeIn var(--dur1) linear forwards;
+  text-align: center;
+}
+.status__dot {
+  animation: appear1 var(--dur1) var(--dur1) steps(1,start) infinite;
+  display: inline-block;
+}
+.status__dot:nth-child(2) {
+  animation: appear2 var(--dur1) var(--dur1) steps(1,start) infinite;
+}
+.status__dot:nth-child(3) {
+  animation: appear3 var(--dur1) var(--dur1) steps(1,start) infinite;
+}

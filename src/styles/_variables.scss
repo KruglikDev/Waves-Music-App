@@ -35,6 +35,26 @@
   --lightShadow: 1px 1px 1px whitesmoke;
   --main-image-shadow: -2px -2px 5px 2px rgb(255, 255, 255),
     1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+
+  //Loader
+  --fg: #17181c;
+  --shade1: #727274;
+  --shade2: #cccdd1;
+  --shade3: #f3f4f8;
+  --shade4: #ffffff;
+  --dur1: 1s;
+  --dur2: 6s;
+}
+
+/* Dark mode Loader*/
+@media (prefers-color-scheme: light) {
+  :root {
+    --fg: #e3e4e8;
+    --shade1: #23252a;
+    --shade2: #3e424c;
+    --shade3: #4a4e5a;
+    --shade4: #686e7e;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
