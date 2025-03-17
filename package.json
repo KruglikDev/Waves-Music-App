@@ -1,40 +1,28 @@
 {
   "name": "waves_player",
-  "version": "1.0",
+  "version": "2.0",
   "private": true,
+  "scripts": {
+    "dev": "farm clean && farm start",
+    "build": "farm build",
+    "preview": "farm preview",
+    "clean": "farm clean"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.15.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3",
-    "sass": "^1.44.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@farmfe/cli": "1.0.4",
+    "@farmfe/core": "1.6.6",
+    "@farmfe/js-plugin-babel": "0.0.3",
+    "@farmfe/js-plugin-react-compiler": "0.0.3",
+    "@farmfe/plugin-react": "1.2.6",
+    "@farmfe/plugin-sass": "1.1.0",
+    "core-js": "3.41.0",
+    "react-refresh": "0.16.0",
+    "sass": "1.85.1"
   }
 }

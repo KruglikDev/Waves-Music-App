@@ -1,5 +1,5 @@
 import { memo } from "react";
-import LibrarySong from "./LibrarySong";
+import LibrarySong from "./LibrarySong.jsx";
 import { v4 as uuidv4 } from "uuid";
 
 const Library = ({
