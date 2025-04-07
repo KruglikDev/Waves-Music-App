@@ -3,7 +3,7 @@ import Player from "./components/Player";
 import Song from "./components/Song";
 import Nav from "./components/Nav";
 import Loader from "./components/Loader";
-import data from "./data";
+import chillHopData from "./data";
 
 const Library = lazy(() => import("./components/Library"));
 
@@ -12,7 +12,7 @@ function App() {
 
   let root = document.documentElement;
 
-  const [songs, setSongs] = useState(data());
+  const [songs, setSongs] = useState(chillHopData);
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [libraryStatus, setLibraryStatus] = useState(false);
