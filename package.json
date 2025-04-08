@@ -6,15 +6,17 @@
     "dev": "farm clean && farm start",
     "build": "farm build",
     "preview": "farm preview",
-    "clean": "farm clean"
+    "clean": "farm clean",
+    "format": "bunx biome format --write ."
   },
   "dependencies": {
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "uuid": "^8.3.2",
+    "uuid": "11.1.0",
     "web-vitals": "^2.1.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@farmfe/cli": "1.0.4",
     "@farmfe/core": "1.6.6",
     "@farmfe/js-plugin-babel": "0.0.3",
