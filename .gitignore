@@ -8,6 +8,8 @@
 /.pnp
 .pnp.js
 /.idea
+.idea
+/idea
 
 # testing
 /coverage
