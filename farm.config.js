@@ -21,7 +21,7 @@ export default defineConfig({
         outputStyle: 'compressed',
         sourceMap: true,
         // Добавляем обработку импортов
-        importer: (url, prev, done) => {
+        importer: (url, _prev, done) => {
           if (url.endsWith('.scss') || url.endsWith('.css')) {
             return { file: url };
           }
