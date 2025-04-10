@@ -1,11 +1,9 @@
-import { useState, useRef, useEffect, lazy, Suspense } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Player from './components/Player';
 import Song from './components/Song';
 import Nav from './components/Nav';
-import Loader from './components/Loader';
 import chillHopData from './data';
-
-const Library = lazy(() => import('./components/Library'));
+import Library from './components/Library';
 
 const App = () => {
   const [songs, setSongs] = useState(chillHopData);
@@ -53,37 +51,35 @@ const App = () => {
   return (
     <main className='App'>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-      <Suspense className='loader' fallback={<Loader />}>
-        <Song currentSong={currentSong} />
-        <Player
-          audioRef={audioRef}
-          currentSong={currentSong}
-          setCurrentSong={setCurrentSong}
-          isPlaying={isPlaying}
-          setIsPlaying={setIsPlaying}
-          setSongInfo={setSongInfo}
-          songInfo={songInfo}
-          songs={songs}
-          setSongs={setSongs}
-        />
-        <Library
-          songs={songs}
-          setCurrentSong={setCurrentSong}
-          audioRef={audioRef}
-          isPlaying={isPlaying}
-          setSongs={setSongs}
-          libraryStatus={libraryStatus}
-          setLibraryStatus={setLibraryStatus}
-        />
-        <audio
-          onTimeUpdate={timeUpdateHandler}
-          onLoadedMetadata={timeUpdateHandler}
-          ref={audioRef}
-          src={currentSong.audio}
-          onEnded={songEndHandler}
-        />
-        <div className='vertical-button' onMouseEnter={() => setLibraryStatus(true)} />
-      </Suspense>
+      <Song currentSong={currentSong} />
+      <Player
+        audioRef={audioRef}
+        currentSong={currentSong}
+        setCurrentSong={setCurrentSong}
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+        setSongInfo={setSongInfo}
+        songInfo={songInfo}
+        songs={songs}
+        setSongs={setSongs}
+      />
+      <Library
+        songs={songs}
+        setCurrentSong={setCurrentSong}
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+        setSongs={setSongs}
+        libraryStatus={libraryStatus}
+        setLibraryStatus={setLibraryStatus}
+      />
+      <audio
+        onTimeUpdate={timeUpdateHandler}
+        onLoadedMetadata={timeUpdateHandler}
+        ref={audioRef}
+        src={currentSong.audio}
+        onEnded={songEndHandler}
+      />
+      <div className='vertical-button' onMouseEnter={() => setLibraryStatus(true)} />
     </main>
   );
 };

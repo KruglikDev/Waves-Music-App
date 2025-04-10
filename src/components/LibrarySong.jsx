@@ -10,10 +10,10 @@ const LibrarySong = ({ song, songs, setCurrentSong, audioRef, isPlaying, setSong
           active: true,
         };
       }
-        return {
-          ...oneSong,
-          active: false,
-        };
+      return {
+        ...oneSong,
+        active: false,
+      };
     });
 
     await setSongs(newSongs);
@@ -32,7 +32,7 @@ const LibrarySong = ({ song, songs, setCurrentSong, audioRef, isPlaying, setSong
       tabIndex={0}
       onKeyDown={e => {
         if (e.code !== 'Enter') return;
-          songSelectHandler();
+        songSelectHandler();
       }}
     >
       <img src={song.cover} alt={song.name} />
