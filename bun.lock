@@ -14,7 +14,7 @@
         "@farmfe/cli": "1.0.4",
         "@farmfe/core": "1.6.6",
         "@farmfe/js-plugin-babel": "0.0.3",
-        "@farmfe/js-plugin-react-compiler": "0.0.3",
+        "@farmfe/js-plugin-react-compiler": "^0.0.3",
         "@farmfe/plugin-react": "1.2.6",
         "@farmfe/plugin-sass": "1.1.0",
         "core-js": "3.41.0",
