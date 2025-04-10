@@ -38,8 +38,8 @@ const Nav = ({ libraryStatus, setLibraryStatus }) => {
           type='radio'
           name='radio_btns'
           className='visually-hidden'
-          onChange={() => setLibraryStatus(!libraryStatus)}
-          value={!!libraryStatus}
+          onClick={() => setLibraryStatus(!libraryStatus)}
+          checked={!!libraryStatus}
         />
         <label htmlFor='library_music' className='content-wrapper'>
           <i className='material-icons-round'>library_music</i>
@@ -62,7 +62,8 @@ const Nav = ({ libraryStatus, setLibraryStatus }) => {
     <nav>
       <h1>Waves</h1>
       <div className='buttons'>
-        <div
+        <button
+          type={'button'}
           data-button='color_changer'
           className='btn'
           onClick={colorModeChanger}
@@ -70,16 +71,16 @@ const Nav = ({ libraryStatus, setLibraryStatus }) => {
           onKeyDown={e => onKeyboardHandler(e)}
         >
           {darkMode ? <DarkBtn /> : <LiteBtn />}
-        </div>
-        <div
+        </button>
+        <button
+          type={'button'}
           data-button='lib_status_changer'
           className='btn'
-          onClick={() => setLibraryStatus(!libraryStatus)}
           tabIndex={0}
           onKeyDown={e => onKeyboardHandler(e)}
         >
           <LibraryStatusView libraryStatus={libraryStatus} />
-        </div>
+        </button>
       </div>
     </nav>
   );
