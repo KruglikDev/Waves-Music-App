@@ -18,10 +18,10 @@ Neumorphic React audio streaming app with copyright-free lo-fi music.
 Install npm first and run the project:
 
 ```sh
-  npm install
+  bun install
 ```
 
 ```sh
-  npm start
+  bun start
   ```
 ![Alt text](/public/WavesDark.png?raw=true "WavesDark")
